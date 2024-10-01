@@ -8,20 +8,14 @@ on:
       - dev
 
 jobs:
+
   build:
     runs-on: ubuntu-latest
 
     steps:
       # Step 1: Checkout the code from the repository
       - name: Checkout code
-        uses: actions/checkout@v3
+        script :
+          - echo "Ceci est un test de modification du fichier ci.yml"
 
-      # Step 2: Set up Node.js environment (Use a specific Node.js version)
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
 
-      # Step 3: Install dependencies
-      - name: Install dependencies
-        run: npm install
